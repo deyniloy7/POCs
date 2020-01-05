@@ -1,0 +1,8 @@
+#endpoint: ''endpoint: https://eu1.prisma.sh/niloy-dey-c8d02b/prisma-demo/dev
+
+
+datamodel: datamodel.prisma
+
+generate:
+  - generator: javascript-client
+    output: ../src/generated/prisma-client

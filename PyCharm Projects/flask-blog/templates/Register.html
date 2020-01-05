@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+        {% for message in messages %}
+            <div>
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endif %}
+{% endwith %}
+<div>
+    <form method="POST" action="">
+        {{ form.hidden_tag() }}
+        <fieldset>
+            <legend>Join Today</legend>
+            <div>
+                {{ form.username.label() }}
+                {{ form.username }}
+            </div>
+            <div>
+                {{ form.email.label() }}
+                {{ form.email }}
+            </div>
+            <div>
+                {{ form.password.label() }}
+                {{ form.password }}
+            </div>
+            <div>
+                {{ form.confirm_password.label() }}
+                {{ form.confirm_password }}
+            </div>
+        </fieldset>
+        <div>
+            {{ form.submit }}
+        </div>
+    </form>
+</div>
+<div>
+    <small>
+        Already have an account?
+        <a href="{{ url_for('login') }}">Login</a>
+    </small>
+</div>
+</body>
+</html>
