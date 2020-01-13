@@ -1,0 +1,6 @@
+[submodule "flaskApps/flask-restful-example"]
+	path = flaskApps/flask-restful-example
+	url = https://github.com/deyniloy7/POCs.git
+[submodule "flaskApps/flaskApps/flask-tutorial"]
+	path = flaskApps/flaskApps/flask-tutorial
+	url = https://github.com/deyniloy7/POCs.git
